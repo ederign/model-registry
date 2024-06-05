@@ -37,3 +37,4 @@ jobs:
               echo "Uncommitted file changes detected: $clean"
               git diff
               exit 1
+          fi
