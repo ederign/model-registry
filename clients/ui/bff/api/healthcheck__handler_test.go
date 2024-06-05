@@ -40,7 +40,7 @@ func TestHealthCheckHandler(t *testing.T) {
 	}
 
 	expected := data.HealthCheckModel{
-		Status: "available",
+		Status: "available - error",
 		SystemInfo: data.SystemInfo{
 			Version: Version,
 		},
