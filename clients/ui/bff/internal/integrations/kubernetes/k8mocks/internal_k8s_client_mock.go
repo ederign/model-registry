@@ -3,9 +3,10 @@ package k8mocks
 import (
 	"context"
 	"fmt"
+	"log/slog"
+
 	k8s "github.com/kubeflow/model-registry/ui/bff/internal/integrations/kubernetes"
 	"k8s.io/client-go/kubernetes"
-	"log/slog"
 )
 
 type InternalKubernetesClientMock struct {
