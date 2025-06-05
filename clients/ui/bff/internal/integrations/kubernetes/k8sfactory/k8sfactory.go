@@ -23,6 +23,7 @@ func NewKubernetesClientFactory(cfg config.EnvConfig, logger *slog.Logger) (kube
 		k8sFactory := kubernetes.NewTokenClientFactory(logger, cfg)
 		return k8sFactory, nil
 
+//TODO LUCAS red hat only code
 	case config.AuthMethodRedHatUser:
 		return redhat.NewRHOAIClientFactory(logger, cfg), nil
 

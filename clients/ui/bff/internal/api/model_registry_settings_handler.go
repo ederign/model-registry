@@ -16,6 +16,7 @@ type ModelRegistrySettingsListEnvelope Envelope[[]models.ModelRegistryKind, None
 type ModelRegistrySettingsEnvelope Envelope[models.ModelRegistryKind, None]
 type ModelRegistrySettingsPayloadEnvelope Envelope[models.ModelRegistrySettingsPayload, None]
 
+// TODO LUCAS review this
 func (app *App) GetAllModelRegistriesSettingsHandler(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 
 	namespace, ok := r.Context().Value(constants.NamespaceHeaderParameterKey).(string)
@@ -52,6 +53,7 @@ func (app *App) GetAllModelRegistriesSettingsHandler(w http.ResponseWriter, r *h
 
 }
 
+// TODO LUCAS review this
 func (app *App) GetModelRegistrySettingsHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctxLogger := helper.GetContextLoggerFromReq(r)
 	ctxLogger.Info("This functionality is not implement yet. This is a STUB API to unblock frontend development")
@@ -87,6 +89,7 @@ func (app *App) GetModelRegistrySettingsHandler(w http.ResponseWriter, r *http.R
 	}
 }
 
+// TODO LUCAS review this
 func (app *App) CreateModelRegistrySettingsHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctxLogger := helper.GetContextLoggerFromReq(r)
 	ctxLogger.Info("This functionality is not implement yet. This is a STUB API to unblock frontend development")
@@ -129,6 +132,7 @@ func (app *App) CreateModelRegistrySettingsHandler(w http.ResponseWriter, r *htt
 	}
 }
 
+// TODO LUCAS implement this
 func (app *App) UpdateModelRegistrySettingsHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctxLogger := helper.GetContextLoggerFromReq(r)
 	ctxLogger.Info("This functionality is not implement yet. This is a STUB API to unblock frontend development")
@@ -152,6 +156,7 @@ func (app *App) UpdateModelRegistrySettingsHandler(w http.ResponseWriter, r *htt
 	}
 }
 
+// TODO LUCAS implement this
 func (app *App) DeleteModelRegistrySettingsHandler(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	ctxLogger := helper.GetContextLoggerFromReq(r)
 	ctxLogger.Info("This functionality is not implement yet. This is a STUB API to unblock frontend development")
@@ -164,6 +169,7 @@ func (app *App) DeleteModelRegistrySettingsHandler(w http.ResponseWriter, r *htt
 	w.WriteHeader(200)
 }
 
+// TODO LUCAS delete this (move to shared client on mocking for now)
 func createSampleModelRegistry(name string, namespace string) models.ModelRegistryKind {
 
 	creationTime, _ := time.Parse(time.RFC3339, "2024-03-14T08:01:42Z")

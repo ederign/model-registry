@@ -41,12 +41,6 @@ func main() {
 		Level: cfg.LogLevel,
 	}))
 
-	//validate auth method
-	if cfg.AuthMethod != config.AuthMethodInternal && cfg.AuthMethod != config.AuthMethodUser && cfg.AuthMethod != config.AuthMethodRedHatUser {
-		logger.Error("invalid auth method: (must be internal or user_token or user_token_red_hat)", "authMethod", cfg.AuthMethod)
-		os.Exit(1)
-	}
-
 	// Only use for logging errors about logging configuration.
 	slog.SetDefault(logger)
 
